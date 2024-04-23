@@ -2,7 +2,9 @@
 const { Router } = require('express');
 const fs = require('fs');
 const path = require('path');
+
 const { map } = require('../../app');
+const getIngredients = require('../post/discountIngredients');
 
 const router = Router();
 
@@ -23,10 +25,21 @@ const wherehouse = (randomRecipe) => {
       recipe = randomRecipe[0];
     }
   });
+  
+  //get All ingredients
+  if(!getIngredients.discountIngredients(randomRecipe.ingredients)){
+    console.log('The store does not have all the ingredients, impossible to create the recipe.');
+    res.send({
+      status: 404,
+      msg : 'The store does not have all the ingredients, impossible to create the recipe.'
+    })
+  };
+
   fs.appendFileSync(recipePath, alterRecipies, (errr) =>{
     errr ? console.log(`Error append file => ${errr}`) : null;
   });
 };
+
 
 router.get('/getRecipe', async (req, res, next) => {
   const totalRecipes = recipes.length;

@@ -1,0 +1,44 @@
+{
+  "ingredients": [
+    {
+      "name": "Tomato",
+      "quantity": 10
+    },
+    {
+      "name": "Lemon",
+      "quantity": 10
+    },
+    {
+      "name": "Potato",
+      "quantity": 10
+    },
+    {
+      "name": "Rice",
+      "quantity": 10
+    },
+    {
+      "name": "Ketchup",
+      "quantity": 10
+    },
+    {
+      "name": "Lettuce",
+      "quantity": 10
+    },
+    {
+      "name": "Onion",
+      "quantity": 10
+    },
+    {
+      "name": "Cheese",
+      "quantity": 10
+    },
+    {
+      "name": "Meat",
+      "quantity": 10
+    },
+    {
+      "name": "Chicken",
+      "quantity": 10
+    }
+  ]
+}
