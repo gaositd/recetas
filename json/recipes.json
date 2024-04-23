@@ -1,0 +1,71 @@
+{
+  "recipes": [
+    {
+      "id":1,
+      "name": "Arroz con Pollo al Limón",
+      "ingredients": [
+        "Rice",
+        "Chicken",
+        "Lemon",
+        "Onion",
+        "Tomato"
+      ],
+      "preparation": "Cocina el arroz según las instrucciones. Mientras tanto, saltea el pollo con cebolla y tomate en una sartén. Exprime el jugo de limón sobre el pollo cocido y mezcla bien. Sirve el pollo sobre una cama de arroz y decora con rodajas de limón.",
+      "totalRecipes": 5
+    },
+    {
+      "id":2,
+      "name": "Ensalada de Lechuga y Queso con Aderezo de Limón",
+      "ingredients": [
+        "Lettuce",
+        "Cheese",
+        "Lemon"
+      ],
+      "preparation": "Corta la lechuga en trozos y colócala en un tazón. Agrega trozos de queso encima. Exprime el jugo de limón sobre la ensalada como aderezo.",
+      "totalRecipes": 5
+    },
+    {
+      "id":3,
+      "name": "Papas Rellenas de Carne con Queso",
+      "ingredients": [
+        "Potato",
+        "Cheese",
+        "Meat",
+        "Onion"
+      ],
+      "preparation": "Hornea las papas hasta que estén tiernas. Corta una abertura en la parte superior de cada papa y retira parte de la pulpa. Rellena las papas con una mezcla de carne molida y cebolla. Cubre con queso rallado y hornea hasta que el queso se derrita.",
+      "totalRecipes": 5
+    },
+    {
+      "id":4,
+      "name": "Arroz con Tomate y Pollo",
+      "ingredients": [
+        "Rice",
+        "Chicken",
+        "Tomato"
+      ],
+      "preparation": "Cocina el arroz según las instrucciones. Mientras tanto, cocina el pollo en una salsa de tomate. Sirve el pollo sobre una cama de arroz y decora con rodajas de tomate.",
+      "totalRecipes": 5
+    },
+    {
+      "id":5,
+      "name": "Sopa de Cebolla con Queso",
+      "ingredients": [
+        "Onion",
+        "Cheese"
+      ],
+      "preparation": "Cocina las cebollas en caldo de pollo hasta que estén suaves. Sirve la sopa caliente y agrega queso rallado encima.",
+      "totalRecipes": 5
+    },
+    {
+      "id":6,
+      "name": "Tortilla de Patatas con Tomate",
+      "ingredients": [
+        "Potato",
+        "Tomato"
+      ],
+      "preparation": "Cocina las papas hasta que estén tiernas y doradas. Bate los huevos y agrégales las papas cocidas en rodajas. Vierte la mezcla en una sartén y cocina hasta que esté dorada por ambos lados. Sirve con rodajas de tomate fresco.",
+      "totalRecipes": 5
+    }
+  ]
+}
