@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { ERRORAPPEND } = require('../../../constants/constants');
 
 const ingredientsPath = path.join(__dirname, '../../../json/ingredients.json');
 const ingredients =  JSON.parse(fs.readFileSync(ingredientsPath, 'utf-8'));
@@ -15,7 +16,7 @@ const discountIngredients = (Allngredients) => {
     });
   });
   fs.appendFileSync(ingredientsPath, alterIngredients, (errr) =>{
-    errr ? console.log(`Error append file => ${errr}`) : null;
+    errr ? console.log(`${ERRORAPPEND} => ${errr}`) : null;
   });
   return ingredientFlag;
 };

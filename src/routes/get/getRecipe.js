@@ -5,6 +5,13 @@ const path = require('path');
 
 const { map } = require('../../app');
 const getIngredients = require('../post/discountIngredients');
+const {
+  NOINGREDIENTS,
+  ERRORAPPEND,
+  NORECIPES,
+  SENDINGREDIENTS,
+  PREPARINRECIPE,
+} = require('../../../constants/constants');
 
 const router = Router();
 
@@ -25,18 +32,18 @@ const wherehouse = (randomRecipe) => {
       recipe = randomRecipe[0];
     }
   });
-  
+
   //get All ingredients
   if(!getIngredients.discountIngredients(randomRecipe.ingredients)){
-    console.log('The store does not have all the ingredients, impossible to create the recipe.');
+    console.log();
     res.send({
       status: 404,
-      msg : 'The store does not have all the ingredients, impossible to create the recipe.'
+      msg : NOINGREDIENTS,
     })
   };
 
   fs.appendFileSync(recipePath, alterRecipies, (errr) =>{
-    errr ? console.log(`Error append file => ${errr}`) : null;
+    errr ? console.log(`${ERRORAPPEND} => ${errr}`) : null;
   });
 };
 
@@ -44,7 +51,7 @@ const wherehouse = (randomRecipe) => {
 router.get('/getRecipe', async (req, res, next) => {
   const totalRecipes = recipes.length;
   if (totalRecipes === 0) {
-    return res.status(404).json({ status: 404, msg: 'No recipes are available.' });
+    return res.status(404).json({ status: 404, msg: NORECIPES});
   }
 
   const randomIndex = Math.floor(Math.random() * totalRecipes);
@@ -53,15 +60,15 @@ router.get('/getRecipe', async (req, res, next) => {
   if(Object.keys(recipes).length === 0 || recipes.totalRecipes === 0){
     res.send({
       status:404,
-      msg:`Do not have this recipe (${randomRecipe.name})`,
+      msg:`${NORECIPES} (${randomRecipe.name})`,
     })
   }
 
   wherehouse(randomRecipe);
-  console.log('Send the ingredients to the cook to prepare the recipe');
+  console.log(SENDINGREDIENTS);
 
   setTimeout(() =>{
-    console.log('preparing ti recipe');
+    console.log(PREPARINRECIPE);
   }, 4000);
 
   res.status({
